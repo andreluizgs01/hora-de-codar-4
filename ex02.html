@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Verificação de Planetas</title>
+</head>
+<body>
+    <h1>Verificação de Planetas</h1>
+    
+    <script>
+        // Cria um array de planetas
+        var planetas = ["Terra", "Marte", "Plutão", "Vênus", "Júpiter", "Saturno"];
+
+        // Solicita ao usuário que digite o nome de um planeta
+        var planetaUsuario = prompt("Digite o nome de um planeta:");
+
+        // Converte a entrada do usuário para a mesma capitalização do array de planetas
+        planetaUsuario = planetaUsuario.charAt(0).toUpperCase() + planetaUsuario.slice(1).toLowerCase();
+
+        // Verifica se o planeta está na lista
+        if (planetas.includes(planetaUsuario)) {
+            document.write("O planeta " + planetaUsuario + " está na lista.");
+        } else {
+            document.write("O planeta " + planetaUsuario + " não está na lista.");
+        }
+    </script>
+</body>
+</html>

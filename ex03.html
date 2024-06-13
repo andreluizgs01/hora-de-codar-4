@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Compras</title>
+</head>
+<body>
+    <h1>Lista de Compras</h1>
+    
+    <script>
+        var frutas = ["Maçã", "Banana", "Laranja", "Manga", "Uva", "Melancia"];
+
+        function exibirLista() {
+            document.write("<strong>Lista de Frutas:</strong><br>");
+            for (var i = 0; i < frutas.length; i++) {
+                document.write(frutas[i] + "<br>");
+            }
+            document.write("<br>");
+        }
+
+        exibirLista();
+
+        while (frutas.length > 0) {
+            var frutaUsuario = prompt("Digite o nome de uma fruta para ser removida:");
+
+            frutaUsuario = frutaUsuario.charAt(0).toUpperCase() + frutaUsuario.slice(1).toLowerCase();
+
+            var index = frutas.indexOf(frutaUsuario);
+            if (index !== -1) {
+
+                frutas.splice(index, 1);
+                alert("Fruta foi retirada da lista.");
+
+
+                document.write("<br><strong>Lista atualizada:</strong><br>");
+                exibirLista();
+            } else {
+                alert("Fruta indisponível no nosso mercado.");
+            }
+        }
+
+        alert ("Lista de compras finalizada.");
+    </script>
+</body>
+</html>

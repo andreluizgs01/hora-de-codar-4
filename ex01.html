@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cadastro de Estudantes</title>
+</head>
+<body>
+    <h1>Cadastro de Estudantes</h1>
+    
+    <script>
+        // Array para armazenar os estudantes cadastrados
+        var estudantes = [];
+
+        // Loop para solicitar ao usuário que cadastre os estudantes
+        while (true) {
+            var nome = prompt("Digite o nome do estudante (ou 'PARE' para encerrar):");
+            // Verifica se o usuário digitou 'PARE' para encerrar o cadastro
+            if (nome.toUpperCase() === 'PARE') {
+                break;
+            }
+            // Adiciona o nome do estudante ao array
+            estudantes.push(nome);
+        }
+
+        // Exibe a quantidade de estudantes cadastrados e a lista com cada um deles
+        document.write("Quantidade de estudantes cadastrados: " + estudantes.length + "<br>");
+        document.write("<strong>Lista de Estudantes:</strong><br>");
+        for (var i = 0; i < estudantes.length; i++) {
+            document.write((i + 1) + ". " + estudantes[i] + "<br>");
+        }
+    </script>
+</body>
+</html>
